@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import MainLayout from "./components/layout/MainLayout.jsx";
 import Dashboard from "./pages/dashboard/Dashboard.jsx";
-import Employee from "./pages/employee/employee.jsx";
-import Settings from "./pages/settings/settings.jsx";
+import Employee from "./pages/employee/Employee.jsx";
+import Settings from "./pages/settings/Settings.jsx";
 
 const App = () => {
   return (
