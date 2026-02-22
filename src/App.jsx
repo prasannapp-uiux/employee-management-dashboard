@@ -1,12 +1,21 @@
-import Header from "./components/layout/header";
+import { Route, Routes } from "react-router-dom";
+import MainLayout from "./components/layout/MainLayout.jsx";
+import Dashboard from "./pages/dashboard/Dashboard.jsx";
+import Employee from "./pages/employee/employee.jsx";
+import Settings from "./pages/settings/settings.jsx";
 
-function App() {
+const App = () => {
   return (
     <>
-    <h1 className="text-4xl font-bold text-blue-600">Employee Management Dashboard</h1>
-    <Header/>
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Dashboard />}></Route>
+          <Route path="/employee-list" element={<Employee />}></Route>
+          <Route path="/settings" element={<Settings />}></Route>
+        </Route>
+      </Routes>
     </>
-  )
-}
-<Header/>
+  );
+};
+
 export default App;
